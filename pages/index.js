@@ -93,7 +93,7 @@ export default function Home() {
                 </a>
               </Link>
             </div>
-            <div className='flex transform lg:translate-x-20 justify-between'>
+            <div className='md:flex hidden transform lg:translate-x-20 justify-between'>
               <div className='mr-2 md:mr-7'>
                 <a
                   target='_blank'

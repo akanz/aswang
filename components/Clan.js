@@ -56,8 +56,9 @@ const Clan = ({ Img }) => {
                     src={`/images/${Img === 0 ? 'siyokoy' : Img === 1 ? 'tikbalang' : Img === 2 ? 'duwende' : 'manananggal'}.svg`}
                     alt='siyokoy' /> */}
             </div>
-            <div className={styles.Text}>
-                {/* {clans.map((clan, key) => clan.id === count && <div key={key}
+            <div className={`${styles.Clan} p-4`}>
+                <div className={styles.Text}>
+                    {/* {clans.map((clan, key) => clan.id === count && <div key={key}
                     className='md:w-4/5 lg:w-2/3 mx-auto p-4'>
                     <h1 className='text-5xl lg:text-7xl mb-6 italic font-extrabold'>{clan.name}</h1>
                     <h3 className='text-xl font-light italic'>
@@ -65,7 +66,9 @@ const Clan = ({ Img }) => {
                     </h3>
                 </div>)} */}
 
+                </div>
             </div>
+
         </section>
     )
 }

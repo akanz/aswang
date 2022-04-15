@@ -4,8 +4,9 @@
   animation: bgImage 32s infinite;
 }
 .Text {
-  @apply bg-center bg-no-repeat flex items-center justify-center;
+  @apply bg-contain bg-no-repeat lg:h-90vh flex items-center justify-center;
   animation: bgText 32s infinite;
+  height: 30vh;
 }
 
 .Clans {
@@ -13,7 +14,7 @@
   animation: bgColor 32s infinite;
 }
 .Grad {
-  @apply bg-gradient-to-tr h-40 w-40 mix-blend-multiply opacity-30 shadow-2xl drop-shadow-2xl absolute  from-aswangGrad1 to-aswangGrad2;
+  @apply bg-gradient-to-tr h-40 w-40 mix-blend-multiply opacity-30 shadow-2xl drop-shadow-2xl md:absolute  from-aswangGrad1 to-aswangGrad2;
 }
 
 @keyframes bgImage {

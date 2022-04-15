@@ -11,7 +11,7 @@ const FanArt = () => {
         <motion.section
 
             className='bg-opacity-20 relative bg-white'>
-            <div className={`${styles.Grad} bottom-0 left-0 rounded-tr-full`}>
+            <div className={`${styles.Grad} bottom-0 md:left-0 rounded-tr-full`}>
 
             </div>
             <div className={`${styles.Grad} top-0 right-0 rounded-bl-full`}>
