@@ -4,9 +4,8 @@
   animation: bgImage 32s infinite;
 }
 .Text {
-  @apply bg-contain bg-no-repeat lg:h-90vh flex items-center justify-center;
+  @apply bg-center bg-contain bg-no-repeat h-50vh lg:h-90vh flex items-center justify-center;
   animation: bgText 32s infinite;
-  height: 30vh;
 }
 
 .Clans {
