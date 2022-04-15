@@ -41,7 +41,7 @@ const Founders = () => {
             </h1>
 
             <motion.div
-                variants={opacityVariant}
+                // variants={opacityVariant}
                 initial="hidden"
                 whileInView="visible"
                 className='grid md:grid-cols-2 gap-12 w-9/10 lg:w-7/10 mx-auto'>

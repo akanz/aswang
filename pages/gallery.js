@@ -46,7 +46,7 @@ const Gallery = () => {
                         <Link href='/'>
                             <a className='flex items-center'>
                                 <Image height={50} width={60} src='/images/aswangLogo.svg' alt='aswang fansite logo' />
-                                <span className='mx-1 text-lg text-black capitalize'>fansite</span>
+                                <span className='mx-1 text-lg text-red-700 font-bold capitalize'>fansite</span>
                             </a>
                         </Link>
                     </div>
@@ -83,11 +83,13 @@ const Gallery = () => {
                 <h1 className='text-4xl font-bold my-16 text-center'>
                     Aswang Fan Art Gallery
                 </h1>
-                {dataLoading && <div className='flex items-center justify-center'>
+                {dataLoading && <><div className='flex items-center justify-center'>
                     <Image src='/images/loading.svg'
                         width={200}
                         height={200}
-                        alt='' /></div>}
+                        alt='' /></div>
+                    <div className='text-xl text-center'>Loading...</div>
+                </>}
 
 
                 {AllArts.length > 0 && <div className='Art'>

@@ -160,12 +160,16 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='flex items-center mt-12 w-9/10 mx-auto'>
-            <Image src='/images/copyright.svg' alt='copyright'
-              width={25} height={25} />
-            2022 All Rights Reserved, AswangTribe Fansite. brought to you by
+          <div className='mt-12 w-9/10 mx-auto'>
+            <div className='flex items-center'>
+              <Image src='/images/copyright.svg' alt='copyright'
+                width={25} height={25} />
+              <span> 2022 </span>
+            </div>
+            All Rights Reserved, AswangTribe Fansite. brought to you by
             <a className='mx-2 text-red-700 italic' href='https://twitter.com/chimmss_?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg'>chimmss.NFT </a> !pray.
           </div>
+
         </section>
 
       </main>

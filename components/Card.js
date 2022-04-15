@@ -6,7 +6,7 @@ import { rotateVariant } from '../pages'
 const Card = ({ image, name, username, bio, profileLink }) => {
     return (
         <motion.div
-            variants={rotateVariant}
+            // variants={rotateVariant}
             initial="hidden"
             whileInView="visible"
             className='p-4 py-8 text-center rounded-2xl shadow-lg'>

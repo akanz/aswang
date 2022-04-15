@@ -6,10 +6,10 @@ import { opacityVariant } from '../pages'
 const Intro = () => {
     return (
         <motion.section
-            variants={opacityVariant}
+            // variants={opacityVariant}
             initial="hidden"
             whileInView="visible"
-            className='grid md:grid-cols-2 py-16'>
+            className='grid md:grid-cols-2 animate-pulse py-16'>
             <div className='w-9/10 md:w-4/5 mx-auto lg:mt-24'>
                 <h1 className='text-5xl my-5 mt-16'>What is AswangTribe?</h1>
                 <h4 className='text-lg text-gray-600 italic font-extralight'>Aswang Tribe is a collection of 3333 generative NFTs on ETH.
