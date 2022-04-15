@@ -96,7 +96,7 @@ const Gallery = () => {
                     {AllArts.map(data =>
                         <motion.div
                             // whileHover={{ scale: 1.1 }}
-                            key={data._id} className='rounded-lg hover:drop-shadow-xl shadow hover:shadow-lg p-4'>
+                            key={data._id} className='rounded-lg hover:drop-shadow-xl border border-gray-200 hover:shadow-lg p-4'>
                             <div className='rounded-2xl'>
                                 <Image layout="responsive" className='' width={400} height={400}
                                     src={data?.artSrc}

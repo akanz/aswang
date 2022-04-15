@@ -38,7 +38,7 @@ const Upload = () => {
         //     },
         // };
         upLoad.append('handle', handle)
-        upLoad.append('name', name)
+        upLoad.append('name', name.length > 0 ? name : `${handle}'s art`)
         if (!disable) {
             try {
                 const res = await (await axios.post(`https://agile-bastion-80267.herokuapp.com/upload`, upLoad)).data
@@ -59,13 +59,13 @@ const Upload = () => {
 
 
     useEffect(() => {
-        if (handle.length > 0 && name.length > 0 && img) {
+        if (handle.length > 0 && img) {
             setDisable(false)
         }
         else {
             setDisable(true)
         }
-    }, [img, handle, name])
+    }, [img, handle])
 
     // console.log(showModal)
     return (
@@ -101,7 +101,9 @@ const Upload = () => {
                             <div className='border-dashed border p-4 rounded border-gray-400 grid place-content-center'>
                                 {!img &&
                                     <div className='grid place-content-center'>
-                                        <Image width={100} height={100} src='/images/upFile.svg' alt='' />
+                                        <div className='flex justify-center'>
+                                            <Image width={100} height={100} src='/images/upFile.svg' alt='' />
+                                        </div>
                                         {/* <div className='my-2 text-sm text-gray-600'>Drag and drop a cover photo here</div>
                                         <p className='text-center'>OR</p> */}
                                         <label htmlFor='uploadFile' className='border rounded text-center border-blue-300 p-1 text-sm text-blue-300'>Browse</label>

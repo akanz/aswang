@@ -41,9 +41,8 @@ const FanArt = () => {
                     className='flex items-center'>
                     <div>
                         <h2 className='text-3xl lg:text-5xl'>Upload Your Fan Art</h2>
-                        <h4 className='text-lg italic text-gray-600 my-8'>
-                            This game is for people who like adventure! In this game, you are esent morbi vel egestas velit, ac eu.
-                            Diam facilisis at feugiat sed. Urnndmsstellus.This game is for people
+                        <h4 className='text-lg text-gray-600 my-8'>
+                            Showcase your beautiful AswangTribe fan art. <p>Who knows, OGASSI might be watching...</p>
                         </h4>
                         <div>
                             <Link href='/gallery' passHref>

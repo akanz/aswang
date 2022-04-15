@@ -78,7 +78,7 @@ export default function Home() {
   return (
     <div className=''>
       <Head>
-        <title>Aswang Fanpage - Fun page :) </title>
+        <title>Aswang Fansite. This was made for the love of aswang </title>
 
       </Head>
 
@@ -167,7 +167,10 @@ export default function Home() {
               <span> 2022 </span>
             </div>
             All Rights Reserved, AswangTribe Fansite. brought to you by
-            <a className='mx-2 text-red-700 italic' href='https://twitter.com/chimmss_?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg'>chimmss.NFT </a> !pray.
+            <a
+              target='_blank'
+              rel='noreferrer'
+              className='mx-2 text-red-700 italic' href='https://twitter.com/chimmss_?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg'>chimmss.NFT </a> !pray.
           </div>
 
         </section>

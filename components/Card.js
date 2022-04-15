@@ -9,7 +9,7 @@ const Card = ({ image, name, username, bio, profileLink }) => {
             // variants={rotateVariant}
             initial="hidden"
             whileInView="visible"
-            className='p-4 py-8 text-center rounded-2xl shadow-lg'>
+            className='p-4 py-8 text-center rounded-2xl border border-gray-200 hover:shadow-lg'>
             <Image
                 className='rounded-full'
                 width={300}

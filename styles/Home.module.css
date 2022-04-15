@@ -1,19 +1,19 @@
 .Image {
   background-size: contain;
   @apply bg-center bg-no-repeat h-50vh lg:h-90vh;
-  animation: bgImage 32s infinite;
+  animation: bgImage 25s infinite;
 }
 .Text {
   @apply bg-center bg-contain bg-no-repeat h-50vh lg:h-90vh flex items-center justify-center;
-  animation: bgText 32s infinite;
+  animation: bgText 25s infinite;
 }
 
 .Clans {
   font-family: "Lato", sans-serif;
-  animation: bgColor 32s infinite;
+  animation: bgColor 25s infinite;
 }
 .Grad {
-  @apply bg-gradient-to-tr h-40 w-40 mix-blend-multiply opacity-30 shadow-2xl drop-shadow-2xl md:absolute  from-aswangGrad1 to-aswangGrad2;
+  @apply hidden md:block bg-gradient-to-tr h-40 w-40 mix-blend-multiply opacity-30 shadow-2xl drop-shadow-2xl md:absolute  from-aswangGrad1 to-aswangGrad2;
 }
 
 @keyframes bgImage {

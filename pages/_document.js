@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <meta name="description" content="Aswang brings out the creative side of it's community." />
+                <meta name="description" content="AswangTribe brings out the creative side of it's community members." />
                 <link rel="icon" href="/aswang.jpg" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />

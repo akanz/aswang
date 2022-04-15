@@ -10,29 +10,29 @@ const Founders = () => {
             name: 'aswang',
             username: 'AswangNft',
             profileLink: 'https://twitter.com/AswangNFT?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'The lead artist of our wonderful collection'
+            bio: 'Expert Artist / Amateur Shitposter. Creator of the Aswang Collection - the first local Filipino art project to reach 100+ ETH trading volume on OpenSea.'
         },
         {
             image: '/images/liz.jpeg',
             name: 'Liz',
             username: 'LizDuwendeClan',
             profileLink: 'https://twitter.com/LizDuwendeClan?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'This is a little description of the founder above, maximum of two lines'
+            bio: 'Den Mother / Armchair Psychotherapist. Invented Aswang Tribe’s clan system and continues to craft new, innovative ways to foster camaraderie and good vibes among the degens that call this discord home.'
         },
         {
             image: '/images/delmang.jpeg',
             name: 'DeliciousMangoez',
             username: 'DeliciousMangoz',
             profileLink: 'https://twitter.com/DeliciousMangoz?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'This is a little description of the founder above, maximum of two lines'
+            bio: 'Software Developer / Consistently the nicest guy in the room. Mod for World of Women, Hunnys, Sad Girls Bar and Ruumz.'
         },
-        // {
-        //     image: '/images/zhavo.svg',
-        //     name: 'Zhavvo',
-        //     username: 'Zhavvo',
-        //     profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-        //     bio: 'god of memes. pray to zhavvo daily in OGASSI shrine'
-        // },
+        {
+            image: '/images/zhavo.svg',
+            name: 'Zhavvo',
+            username: 'Zhavvo',
+            profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
+            bio: 'god of memes. a shitpost artiste of the highest calibre. pray to zhavvo daily in OGASSI shrine'
+        },
     ]
     return (
         <section className='py-12'>
