@@ -18,11 +18,13 @@ const Genesis = () => {
                         <h1 className='text-3xl lg:text-5xl my-4'>Aswang Collection</h1>
                         <h3 className='text-lg my-8'>View her Genesis NFT Collection with floor price of 3.5ETH</h3>
                         <div>
-                            <Link href='https://opensea.io/collection/aswang'>
-                                <a>
-                                    <Button title='view on opensea' classname='bg-red-700 text-white' />
-                                </a>
-                            </Link>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href='https://opensea.io/collection/aswang'>
+                                <Button title='view on opensea' classname='bg-red-700 text-white' />
+                            </a>
+
                         </div>
                     </div>
                 </div>

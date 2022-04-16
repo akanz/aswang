@@ -10,7 +10,7 @@
 
 .Clans {
   font-family: "Lato", sans-serif;
-  animation: bgColor 25s infinite;
+  /* animation: bgColor 25s infinite; */
 }
 .Grad {
   @apply hidden md:block bg-gradient-to-tr h-40 w-40 mix-blend-multiply opacity-30 shadow-2xl drop-shadow-2xl md:absolute  from-aswangGrad1 to-aswangGrad2;

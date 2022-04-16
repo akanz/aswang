@@ -13,6 +13,7 @@ const Upload = () => {
     const [showModal, setShowModal] = useState(false)
     const [handle, setHandle] = useState('')
     const [name, setName] = useState('')
+    const [link, setLink] = useState('')
     const {
         upLoad, img,
         ImgUpload,
@@ -26,7 +27,7 @@ const Upload = () => {
         setHandle(val)
     }
     const nameChange = (val) => {
-        setName(val)
+        setLink(val)
     }
 
     const onSubmit = async (e) => {
@@ -38,7 +39,8 @@ const Upload = () => {
         //     },
         // };
         upLoad.append('handle', handle)
-        upLoad.append('name', name.length > 0 ? name : `${handle}'s art`)
+        upLoad.append('twitterUrl', link)
+        upLoad.append('name', 'this should not be required')
         if (!disable) {
             try {
                 const res = await (await axios.post(`https://agile-bastion-80267.herokuapp.com/upload`, upLoad)).data
@@ -59,13 +61,13 @@ const Upload = () => {
 
 
     useEffect(() => {
-        if (handle.length > 0 && img) {
+        if (handle.length > 0 && link.length > 0 && img) {
             setDisable(false)
         }
         else {
             setDisable(true)
         }
-    }, [img, handle])
+    }, [img, link, handle])
 
     // console.log(showModal)
     return (
@@ -91,7 +93,7 @@ const Upload = () => {
                                 className='p-2 border-gray-300 rounded border' />
                         </div>
                         <div className='grid mb-3'>
-                            <label className='my-1'>Art Name (Optional)</label>
+                            <label className='my-1'>Twitter link to fan art post</label>
                             <input
                                 onChange={(e) => nameChange(e.target.value)}
                                 className='p-2 border-gray-300 rounded border' />

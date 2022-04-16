@@ -85,28 +85,33 @@ const Gallery = () => {
                 </h1>
                 {dataLoading && <><div className='flex items-center justify-center'>
                     <Image src='/images/loading.svg'
-                        width={200}
-                        height={200}
+                        width={100}
+                        height={100}
                         alt='' /></div>
-                    <div className='text-xl text-center'>Loading...</div>
+                    <div className='text-base text-center'>Loading...</div>
                 </>}
 
 
                 {AllArts.length > 0 && <div className='Art'>
                     {AllArts.map(data =>
-                        <motion.div
-                            // whileHover={{ scale: 1.1 }}
-                            key={data._id} className='rounded-lg hover:drop-shadow-xl border border-gray-200 hover:shadow-lg p-4'>
-                            <div className='rounded-2xl'>
-                                <Image layout="responsive" className='' width={400} height={400}
-                                    src={data?.artSrc}
-                                    alt='' />
-                            </div>
-                            <div>
-                                <h3 className='text-xl py-2'>{data?.name}</h3>
-                                <h5 className=''>Twitter: <span className='text-blue-400'> @{data?.handle} </span></h5>
-                            </div>
-                        </motion.div>)}
+                        <a
+                            target="_blank"
+                            rel='noreferrer'
+                            href={data.twitterUrl}
+                            key={data._id} >
+                            <motion.div
+                                // whileHover={{ scale: 1.1 }}
+                                className='rounded-lg hover:drop-shadow-xl border border-gray-200 hover:shadow-lg p-4'>
+                                <div className='rounded-2xl'>
+                                    <Image layout="responsive" className='' width={400} height={400}
+                                        src={data?.artSrc}
+                                        alt='' />
+                                </div>
+                                <div>
+                                    {/* <h3 className='text-xl py-2'>{data?.name}</h3> */}
+                                    <h5 className='my-4 text-lg'>Twitter: <span className='text-blue-400'> @{data?.handle} </span></h5>
+                                </div>
+                            </motion.div> </a>)}
                 </div>}
                 <div className='w-9/10 mx-auto'>
                     <div onClick={loadMore} className='my-28 justify-center flex text-center'>
@@ -121,10 +126,8 @@ const Gallery = () => {
                         </div>
                         <div className='col-span-4'>
                             All Fan Art Listed on this page is subject to copyright.
-                            Please do not use any pictures from this site for personal projects unless
-                            you have permission from the Owners Listed on this page is subject to copyright.
-                            Please do not use any pictures from this site for personal projects unless
-                            you have permission from the Owner
+                            Please do not use any pictures from this site for personal projects unless you have permission from the
+                            Owner who is listed below the picture.
                         </div>
                     </div>
                 </div>

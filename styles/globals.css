@@ -26,5 +26,8 @@ button:disabled {
 }
 
 .Art img {
-  @apply rounded-xl;
+  @apply rounded-xl object-cover;
+}
+.clans {
+  font-family: "Lato", sans-serif;
 }

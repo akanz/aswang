@@ -29,13 +29,14 @@ const Founders = () => {
             profileLink: 'https://twitter.com/DeliciousMangoz?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
             bio: 'Software Developer / Consistently the nicest guy in the room. Builds brand partnerships and collaborations for Aswang Tribe.'
         },
-        // {
-        //     image: '/images/zhavo.svg',
-        //     name: 'Zhavvo',
-        //     username: 'Zhavvo',
-        //     profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-        //     bio: 'god of memes. a shitpost artiste of the highest calibre. pray to zhavvo daily in OGASSI shrine'
-        // },
+        {
+            image: '/images/zhavo.svg',
+            name: 'Zhavvo',
+            username: 'Zhavvo',
+            role: 'god of memes',
+            profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
+            bio: 'A shitpost artiste of the highest calibre. Pray to zhavvo daily in OGASSI shrine'
+        },
     ]
     return (
         <section className='py-12'>
