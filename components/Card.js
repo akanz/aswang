@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { rotateVariant } from '../pages'
 
-const Card = ({ image, name, username, bio, profileLink }) => {
+const Card = ({ image, name, username, role, bio, profileLink }) => {
     return (
         <motion.div
             // variants={rotateVariant}
@@ -18,6 +18,7 @@ const Card = ({ image, name, username, bio, profileLink }) => {
                 src={image}
                 alt={name} />
             <h3 className='text-3xl capitalize my-2'>{name}</h3>
+            <h3 className='text-2xl'>{role}</h3>
             <h5 className='text-lg my-2'>Twitter:
                 <a href={profileLink}
                     target='_blank'

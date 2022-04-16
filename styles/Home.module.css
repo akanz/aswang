@@ -34,6 +34,24 @@
   }
 }
 
+@-webkit-keyframes bgImage {
+  0% {
+    background-image: url("/images/siyokoy.svg");
+  }
+  25% {
+    background-image: url("/images/tikbalang.svg");
+  }
+  50% {
+    background-image: url("/images/duwende.svg");
+  }
+  75% {
+    background-image: url("/images/manananggal.svg");
+  }
+  100% {
+    background-image: url("/images/siyokoy.svg");
+  }
+}
+
 @keyframes bgColor {
   0% {
     background: #4553d9;
@@ -52,7 +70,43 @@
   }
 }
 
+@-webkit-keyframes bgColor {
+  0% {
+    background: #4553d9;
+  }
+  25% {
+    background: #65ac5e;
+  }
+  50% {
+    background: #ac403d;
+  }
+  75% {
+    background: #de9429;
+  }
+  100% {
+    background: #4553d9;
+  }
+}
+
 @keyframes bgText {
+  0% {
+    background-image: url("/images/siyk.svg");
+  }
+  25% {
+    background-image: url("/images/tikb.svg");
+  }
+  50% {
+    background-image: url("/images/duwend.svg");
+  }
+  75% {
+    background-image: url("/images/manan.svg");
+  }
+  100% {
+    background-image: url("/images/siyk.svg");
+  }
+}
+
+@-webkit-keyframes bgText {
   0% {
     background-image: url("/images/siyk.svg");
   }

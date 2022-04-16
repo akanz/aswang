@@ -11,7 +11,7 @@ const Intro = () => {
             whileInView="visible"
             className='grid md:grid-cols-2 py-16'>
             <div className='w-9/10 md:w-4/5 mx-auto lg:mt-24'>
-                <h1 className='text-5xl my-5 mt-16'>What is AswangTribe?</h1>
+                <h1 className='text-3xl lg:text-5xl my-5 mt-16'>What is AswangTribe?</h1>
                 <h4 className='text-base text-gray-600 font-extralight'>Aswang Tribe is a collection of 3333 generative NFTs on ETH.
                     These 3333 Genesis Aswang will form the beating heart and foundation of a decentralized metaverse
                     brand that aims to be the first Filipino blue-chip NFT project, the leading Web3 Art Collective for creators and

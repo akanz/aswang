@@ -8,6 +8,7 @@ const Founders = () => {
         {
             image: '/images/aswang.svg',
             name: 'aswang',
+            role: 'Founding Artist',
             username: 'AswangNft',
             profileLink: 'https://twitter.com/AswangNFT?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
             bio: 'Expert Artist / Amateur Shitposter. Creator of the Aswang Collection - the first local Filipino art project to reach 100+ ETH trading volume on OpenSea.'
@@ -15,6 +16,7 @@ const Founders = () => {
         {
             image: '/images/liz.jpeg',
             name: 'Liz',
+            role: 'Head of Community Affairs',
             username: 'LizDuwendeClan',
             profileLink: 'https://twitter.com/LizDuwendeClan?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
             bio: 'Den Mother / Armchair Psychotherapist. Invented Aswang Tribe’s clan system and continues to craft new, innovative ways to foster camaraderie and good vibes among the degens that call this discord home.'
@@ -22,21 +24,22 @@ const Founders = () => {
         {
             image: '/images/delmang.jpeg',
             name: 'DeliciousMangoez',
+            role: 'Head of Marketing',
             username: 'DeliciousMangoz',
             profileLink: 'https://twitter.com/DeliciousMangoz?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'Software Developer / Consistently the nicest guy in the room. Mod for World of Women, Hunnys, Sad Girls Bar and Ruumz.'
+            bio: 'Software Developer / Consistently the nicest guy in the room. Builds brand partnerships and collaborations for Aswang Tribe.'
         },
-        {
-            image: '/images/zhavo.svg',
-            name: 'Zhavvo',
-            username: 'Zhavvo',
-            profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'god of memes. a shitpost artiste of the highest calibre. pray to zhavvo daily in OGASSI shrine'
-        },
+        // {
+        //     image: '/images/zhavo.svg',
+        //     name: 'Zhavvo',
+        //     username: 'Zhavvo',
+        //     profileLink: 'https://twitter.com/Zhavvo?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
+        //     bio: 'god of memes. a shitpost artiste of the highest calibre. pray to zhavvo daily in OGASSI shrine'
+        // },
     ]
     return (
         <section className='py-12'>
-            <h1 className='text-6xl mb-24 text-center'>
+            <h1 className='text-3xl lg:text-5xl mb-12 md:mb-24 text-center'>
                 Meet the Founders
             </h1>
 
@@ -49,6 +52,7 @@ const Founders = () => {
                     name={data.name}
                     username={data.username}
                     profileLink={data.profileLink}
+                    role={data.role}
                     bio={data.bio} />)}
 
             </motion.div>
