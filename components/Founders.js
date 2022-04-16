@@ -40,7 +40,7 @@ const Founders = () => {
     return (
         <section className='py-12'>
             <h1 className='text-3xl lg:text-5xl mb-12 md:mb-24 text-center'>
-                Meet the Founders
+                Meet the Team
             </h1>
 
             <motion.div

@@ -15,7 +15,7 @@ const Genesis = () => {
                 className='lg:w-7/15 lg:h-96 grid md:grid-cols-2 content-center mx-auto rounded-lg shadow'>
                 <div className='p-8 flex items-center'>
                     <div>
-                        <h1 className='text-2xl lg:text-5xl my-4'>Aswang Collection</h1>
+                        <h1 className='text-3xl lg:text-5xl my-4'>Aswang Collection</h1>
                         <h3 className='text-lg my-8'>View her Genesis NFT Collection with floor price of 3.5ETH</h3>
                         <div>
                             <Link href='https://opensea.io/collection/aswang'>
