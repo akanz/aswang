@@ -23,9 +23,9 @@ const FanArt = () => {
                 whileInView="visible"
                 className='grid md:grid-cols-2 w-9/10 lg:w-4/5 mx-auto'>
                 <motion.div
-                    variants={rotateVariant}
-                    initial="hidden"
-                    whileInView="visible"
+                    // variants={rotateVariant}
+                    // initial="hidden"
+                    // whileInView="visible"
                     className='p-10'>
                     <Image width='100%'
                         height='100%'

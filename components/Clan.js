@@ -107,19 +107,19 @@ const Clan = ({ Img }) => {
                 <motion.div className='mt-20 grid md:grid-cols-2'>
                     <AnimatePresence>
                         <motion.div
-                            variants={fadeInLeft}
+                            variants={opacityVariant}
                             initial="hidden"
                             animate='visible'
-                            exit={{ x: '-300' }}
+                            exit={{ opacity: 0 }}
                         // className={styles.Image}
                         >
                             {clans.map((clan) => clan.id === count &&
                                 <motion.div
                                     key={clan.id}
-                                    variants={fadeInLeft}
+                                    variants={opacityVariant}
                                     initial="hidden"
                                     animate='visible'
-                                    exit={{ x: '-300' }}
+                                    exit={{ opacity: 0 }}
                                 // className={styles.Image}
                                 >
 
