@@ -10,7 +10,7 @@ const Nav = ({ count }) => {
    
     return (
         <header
-            className={`w-full fixed top-0 z-10 shadow-lg ${count === 1 ? 'bg-aswangBlue' :
+            className={`w-full fixed top-0 z-10 ${count === 1 ? 'bg-aswangBlue' :
                 count === 2 ? 'bg-aswangGreen' :
                     count === 3 ? 'bg-aswangBrown' : 'bg-aswangOrange'} `}>
             <nav className='flex transition-all duration-700 items-center justify-between p-4 text-white md:w-9/10 mx-auto'>
