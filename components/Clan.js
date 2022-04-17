@@ -2,8 +2,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { opacityVariant } from '../pages'
-import styles from '../styles/Home.module.css'
+import { useInView } from 'react-intersection-observer';
 import Nav from './Nav'
+import Nav2 from './Nav2'
 
 
 const clans = [
@@ -49,6 +50,19 @@ const fadeInLeft = {
 
 const Clan = ({ Img }) => {
     const [count, setCount] = useState(1);
+    const [nav, setNav] = useState(true)
+
+
+    const listenScrollEvent = () => {
+        window.scrollY > 758 ? setNav(false) : setNav(true);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", listenScrollEvent);
+        return () => {
+            window.removeEventListener("scroll", listenScrollEvent);
+        };
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
@@ -64,61 +78,86 @@ const Clan = ({ Img }) => {
     }, [count])
 
     return (
-        <section className={`${count === 1 ? 'bg-aswangBlue' :
-            count === 2 ? 'bg-aswangGreen' :
-                count === 3 ? 'bg-aswangBrown' : 'bg-aswangOrange'} lg:h-screen text-white`}>
-            <Nav />
-            <motion.div className=' grid md:grid-cols-2'>
+        <section>
+            <div className={`${count === 1 ? 'bg-aswangBlue' :
+                count === 2 ? 'bg-aswangGreen' :
+                    count === 3 ? 'bg-aswangBrown' : 'bg-aswangOrange'} text-white`}>
                 <AnimatePresence>
-                    <motion.div
-                        variants={fadeInLeft}
-                        initial="hidden"
-                        animate='visible'
-                        exit={{ x: '-300' }}
-                    // className={styles.Image}
-                    >
-                        {clans.map((clan) => clan.id === count &&
-                            <motion.div
-                                key={clan.id}
-                                variants={fadeInLeft}
-                                initial="hidden"
-                                animate='visible'
-                                exit={{ x: '-300' }}
-                            // className={styles.Image}
-                            >
-
-                                <Image width='100%'
-                                    height='100%'
-                                    layout='responsive'
-                                    src={clan.img}
-                                    alt={clan.name} />
-                            </motion.div>)}
-                    </motion.div>
+                    {nav ?
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: .3
+                            }}
+                            exit={{ opacity: 0 }}>
+                            <Nav count={count} />
+                        </motion.div> :
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: .3
+                            }}
+                            exit={{ opacity: 0 }}>
+                            <Nav2 />
+                        </motion.div>}
                 </AnimatePresence>
-                <AnimatePresence>
-                    <motion.div
-                        variants={opacityVariant}
-                        initial="hidden"
-                        animate='visible'
-                        exit={{ opacity: 0 }}
-                        className={`p-4 grid place-content-center`}>
-                        {clans.map((clan) => clan.id === count &&
-                            <motion.div
-                                variants={opacityVariant}
-                                initial="hidden"
-                                animate='visible'
-                                exit={{ opacity: 0 }}
-                                key={clan.id}
-                                className='md:w-4/5 clans lg:w-2/3 mx-auto p-4'>
-                                <h1 className='text-4xl uppercase lg:text-6xl mb-6 italic font-extrabold'>{clan.name}</h1>
-                                <h3 className='text-xl font-extralight italic'>
-                                    {clan.text}
-                                </h3>
-                            </motion.div>)}
 
-                    </motion.div>
-                </AnimatePresence>
-            </motion.div>
+                <motion.div className='mt-20 grid md:grid-cols-2'>
+                    <AnimatePresence>
+                        <motion.div
+                            variants={fadeInLeft}
+                            initial="hidden"
+                            animate='visible'
+                            exit={{ x: '-300' }}
+                        // className={styles.Image}
+                        >
+                            {clans.map((clan) => clan.id === count &&
+                                <motion.div
+                                    key={clan.id}
+                                    variants={fadeInLeft}
+                                    initial="hidden"
+                                    animate='visible'
+                                    exit={{ x: '-300' }}
+                                // className={styles.Image}
+                                >
+
+                                    <Image width='100%'
+                                        height='100%'
+                                        layout='responsive'
+                                        priority
+                                        src={clan.img}
+                                        alt={clan.name} />
+                                </motion.div>)}
+                        </motion.div>
+                    </AnimatePresence>
+                    <AnimatePresence>
+                        <motion.div
+                            variants={opacityVariant}
+                            initial="hidden"
+                            animate='visible'
+                            exit={{ opacity: 0 }}
+                            className={`p-4 grid place-content-center`}>
+                            {clans.map((clan) => clan.id === count &&
+                                <motion.div
+                                    variants={opacityVariant}
+                                    initial="hidden"
+                                    animate='visible'
+                                    exit={{ opacity: 0 }}
+                                    key={clan.id}
+                                    className='md:w-4/5 clans lg:w-2/3 mx-auto p-4'>
+                                    <h1 className='text-4xl uppercase lg:text-6xl mb-6 italic font-extrabold'>{clan.name}</h1>
+                                    <h3 className='text-xl font-extralight italic'>
+                                        {clan.text}
+                                    </h3>
+                                </motion.div>)}
+
+                        </motion.div>
+                    </AnimatePresence>
+                </motion.div>
+
+            </div>
 
 
         </section>

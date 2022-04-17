@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React, { useCallback, useEffect, useState } from 'react'
 import Button from '../components/Button'
+import Nav2 from '../components/Nav2';
 import styles from '../styles/Home.module.css'
 
 const Gallery = () => {
@@ -40,46 +41,10 @@ const Gallery = () => {
 
     return (
         <div>
-            <header className={`w-full shadow`}>
-                <nav className='flex items-center justify-between p-4 text-white w-9/10 mx-auto'>
-                    <div className=''>
-                        <Link href='/'>
-                            <a className='flex items-center'>
-                                <Image height={50} width={60} src='/images/aswangLogo.svg' alt='aswang fansite logo' />
-                                <span className='mx-1 text-lg text-red-700 font-bold capitalize'>fansite</span>
-                            </a>
-                        </Link>
-                    </div>
-                    <div className='md:flex hidden transform lg:translate-x-16 justify-between'>
-                        <div className='mr-2 md:mr-7'>
-                            <a
-                                target='_blank'
-                                rel='noreferrer'
-                                href='https://twitter.com/AswangTribe?s=20&t=dVuYKygH1BYpKvZmWu7xHA'>
-                                <Image width={30} height={30} src='/images/twitterDark.svg' alt='twitter' />
-                            </a>
-                        </div>
-                        <div>
-                            <a
-                                target='_blank'
-                                rel='noreferrer'
-                                href='https://discord.gg/gBgTa5rQ'>
-                                <Image width={30} height={30} src='/images/discordDark.svg' alt='discord' />
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <Link href='/upload' passHref>
-                            <a>
-                                <Button title='upload fan art' classname='bg-red-700 text-white border-transparent' />
-                            </a>
-                        </Link>
-                    </div>
-                </nav>
-            </header>
+            <Nav2 />
 
             {/* GALLERY */}
-            <section className='mb-72'>
+            <section className='mb-72 mt-40'>
                 <h1 className='text-4xl font-bold my-16 text-center'>
                     Aswang Fan Art Gallery
                 </h1>

@@ -8,8 +8,7 @@ import FanArt from '../components/FanArt'
 import Founders from '../components/Founders'
 import Genesis from '../components/Genesis'
 import Intro from '../components/Intro'
-import Nav from '../components/Nav'
-import styles from '../styles/Home.module.css'
+
 
 
 export const opacityVariant = {
@@ -78,10 +77,7 @@ export default function Home() {
 
   return (
     <div className=''>
-      <Head>
-        <title>Aswang Fansite. This was made for the love of aswang </title>
-
-      </Head>
+     
 
       <main className=''>
         {/* CLANS */}

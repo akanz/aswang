@@ -11,7 +11,7 @@ const Founders = () => {
             role: 'Founding Artist',
             username: 'AswangNft',
             profileLink: 'https://twitter.com/AswangNFT?s=20&t=kuMfV6wFCdQRJTr8UTc6Cg',
-            bio: 'Expert Artist / Amateur Shitposter. Creator of the Aswang Collection - the first local Filipino art project to reach 100+ ETH trading volume on OpenSea.'
+            bio: 'Founding Artist Creator of the Aswang Collection - the first local Filipino art project to reach 100+ ETH trading volume on OpenSea. Provides the vision and art for AswangTribe.'
         },
         {
             image: '/images/liz.jpeg',

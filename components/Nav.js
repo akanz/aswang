@@ -1,13 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Button from './Button'
 
-const Nav = () => {
+const Nav = ({ count }) => {
+    const [navColor, setnavColor] = useState("transparent");
+
+   
     return (
-        <header className={`w-full`}>
-            <nav className='flex items-center justify-between p-4 text-white md:w-9/10 mx-auto'>
+        <header
+            className={`w-full fixed top-0 z-10 shadow-lg ${count === 1 ? 'bg-aswangBlue' :
+                count === 2 ? 'bg-aswangGreen' :
+                    count === 3 ? 'bg-aswangBrown' : 'bg-aswangOrange'} `}>
+            <nav className='flex transition-all duration-700 items-center justify-between p-4 text-white md:w-9/10 mx-auto'>
                 <div>
                     <Link href='/'>
                         <a className='flex items-center'>
@@ -16,7 +22,7 @@ const Nav = () => {
                         </a>
                     </Link>
                 </div>
-                <div className='md:flex hidden transform lg:translate-x-20 justify-between'>
+                <div className='md:flex hidden transform lg:translate-x-16 justify-between'>
                     <div className='mr-2 md:mr-7'>
                         <a
                             target='_blank'

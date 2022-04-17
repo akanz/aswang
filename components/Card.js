@@ -17,7 +17,7 @@ const Card = ({ image, name, username, role, bio, profileLink }) => {
                 layout=''
                 src={image}
                 alt={name} />
-            <h3 className='text-3xl capitalize my-2'>{name}</h3>
+            <h3 className='text-3xl capitalize font-semibold my-2'>{name}</h3>
             <h3 className='text-2xl'>{role}</h3>
             <h5 className='text-lg my-2'>Twitter:
                 <a href={profileLink}
